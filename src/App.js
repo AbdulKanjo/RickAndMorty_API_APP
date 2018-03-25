@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 
+import Header from "./Components/Header/Header";
 import Character from "./Components/Character/Character";
 import FavCharacter from "./Components/FavCharacter/FavCharacter";
-import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 class App extends Component {
   constructor() {
@@ -85,7 +86,6 @@ class App extends Component {
       return (
         <FavCharacter
           key={character.id}
-          id={character.id}
           name={character.name}
           image={character.image}
         />
@@ -97,7 +97,10 @@ class App extends Component {
           showCharacters={this.showCharacters}
           showFavCharacters={this.showFavCharacters}
         />
-        {!pageSwitch ? <h3>{characterList}</h3> : <h3>{favoriteList}</h3>}
+        <main className="main">
+          {!pageSwitch ? characterList : favoriteList}
+        </main>
+        {!pageSwitch ? <Footer /> : null}
       </div>
     );
   }

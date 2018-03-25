@@ -1,11 +1,22 @@
 import React from "react";
+import "./Header.css";
 
 const Header = ({ showCharacters, showFavCharacters }) => {
   return (
-    <div>
-      <button onClick={showCharacters}>All Characters</button>
-      <button onClick={showFavCharacters}>Favorites</button>
-    </div>
+    <header className="header">
+      <div className="header-icon" />
+      <h1>Select Your favortite Charickter</h1>
+      <div className="btnContainer">
+        <button className="Btn" onClick={showCharacters}>
+          All
+        </button>
+      </div>
+      <div className="btnContainer">
+        <button className="Btn" onClick={showFavCharacters}>
+          Favs
+        </button>
+      </div>
+    </header>
   );
 };
 

@@ -1,0 +1,47 @@
+.cards {
+  height: 27vh;
+  width: 17%;
+  /* border: 2px solid black; */
+}
+
+.cardName {
+  height: 4vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  border: 2px solid green;
+}
+
+.imageContainer {
+  height: 19vh;
+  width: 100%;
+  border-radius: 5px;
+  /* border: 2px dotted purple; */
+}
+
+.cardBtnContainer {
+  height: 4vh;
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+}
+
+.cardBtn {
+  height: 4vh;
+  width: 33.33%;
+  font-size: 1vw;
+  /* border: 2px dotted green; */
+}
+
+.editCardBtn {
+  height: 4vh;
+  width: 50%;
+  font-size: 1vw;
+}
+
+.editNameInput {
+  background-color: aquamarine;
+}

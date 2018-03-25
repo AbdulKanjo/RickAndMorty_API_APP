@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Character.css";
 
 class Character extends Component {
   constructor(props) {
@@ -41,29 +42,46 @@ class Character extends Component {
     const { inputFlag, id, name, image } = this.state;
     const { favCharacter, deleteCharacter } = this.props;
     return (
-      <div>
+      <div className="cards">
         {!inputFlag ? (
           <div>
-            <div>
+            <div className="cardName">
               <h3>{name}</h3>
-              <button onClick={() => favCharacter(name, id, image)}>
-                Favorite
+            </div>
+            <img className="imageContainer" src={image} alt="Character Pic" />
+            <div className="cardBtnContainer">
+              <button className="cardBtn" onClick={this.handleSwitch}>
+                Edit
+              </button>
+              <button className="cardBtn" onClick={() => deleteCharacter(id)}>
+                Delete
+              </button>
+              <button
+                className="cardBtn"
+                onClick={() => favCharacter(name, id, image)}
+              >
+                Fav
               </button>
             </div>
-            <img src={image} alt="Character Pic" />
-            <button onClick={this.handleSwitch}>Edit</button>
-            <button onClick={() => deleteCharacter(id)}>Delete</button>
           </div>
         ) : (
           <div>
-            <h3>{name}</h3>
-            <button onClick={() => favCharacter(name, id, image)}>
-              Favorite
-            </button>
-            <img src={image} alt="Character Pic" />
-            <input onChange={e => this.handleName(e.target.value)} />
-            <button onClick={this.handleSwitch}>Cancel</button>
-            <button onClick={this.handleConfirm}>Submit</button>
+            <div className="cardName">
+              <input
+                className="editNameInput"
+                placeholder="Enter New Name"
+                onChange={e => this.handleName(e.target.value)}
+              />
+            </div>
+            <img className="imageContainer" src={image} alt="Character Pic" />
+            <div className="cardBtnContainer">
+              <button className="editCardBtn" onClick={this.handleSwitch}>
+                Cancel
+              </button>
+              <button className="editCardBtn" onClick={this.handleConfirm}>
+                Submit
+              </button>
+            </div>
           </div>
         )}
       </div>

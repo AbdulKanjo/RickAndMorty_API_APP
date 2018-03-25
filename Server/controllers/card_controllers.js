@@ -36,7 +36,7 @@ module.exports = {
     const { name } = req.body;
     characters.forEach(char => {
       if (char.id === parseInt(id)) {
-        person.name = name;
+        char.name = name;
       }
     });
     res.status(200).json(characters);

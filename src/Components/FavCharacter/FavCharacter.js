@@ -1,22 +1,21 @@
 import React, { Component } from "react";
+import "./FavCharacter.css";
 
 class favCharacter extends Component {
   constructor(props) {
     super();
     this.state = {
-      id: props.id,
       name: props.name,
       image: props.image
     };
   }
 
   render() {
-    const { id, name, image } = this.state;
+    const { name, image } = this.state;
     return (
-      <div>
-        <h5>Id: {id}</h5>
-        <h3>{name}</h3>
-        <img src={image} alt="Character Pic" />
+      <div className="cards">
+        <h3 className="cardName">{name}</h3>
+        <img className="imageContainer" src={image} alt="Character Pic" />
       </div>
     );
   }
