@@ -13,21 +13,33 @@ class App extends Component {
     this.state = {
       characters: [],
       favorites: [],
-      pageSwitch: false
+      pageSwitch: false,
+      page: 2
     };
     this.favCharacter = this.favCharacter.bind(this);
     this.updateCharacter = this.updateCharacter.bind(this);
     this.deleteCharacter = this.deleteCharacter.bind(this);
     this.showCharacters = this.showCharacters.bind(this);
     this.showFavCharacters = this.showFavCharacters.bind(this);
+    this.getNextPage = this.getNextPage.bind(this);
   }
 
   componentDidMount() {
-    axios.get("/api/characters").then(res => {
+    axios.get(`/api/characters`).then(res => {
       this.setState({
         characters: res.data
       });
     });
+  }
+
+  getNextPage(page) {
+    axios.get(`/api/characters/${page}`).then(res => {
+      this.setState({
+        characters: res.data,
+        page: this.state.page + 1
+      });
+    });
+    console.log(this.state.page);
   }
 
   favCharacter(name, id, image) {
@@ -68,7 +80,7 @@ class App extends Component {
   }
 
   render() {
-    const { characters, pageSwitch, favorites } = this.state;
+    const { characters, pageSwitch, favorites, page } = this.state;
     let characterList = characters.map(character => {
       return (
         <Character
@@ -102,7 +114,9 @@ class App extends Component {
             {!pageSwitch ? characterList : favoriteList}
           </main>
         </div>
-        {!pageSwitch ? <Footer /> : null}
+        {!pageSwitch ? (
+          <Footer getNextPage={this.getNextPage} page={page} />
+        ) : null}
       </div>
     );
   }

@@ -5,12 +5,11 @@ let favorites = [];
 
 module.exports = {
   getCharacters: (req, res) => {
-    let { page } = req.query;
+    let { page } = req.params;
 
     if (!page) {
       page = 1;
     }
-
     if (!characters.length) {
       axios
         .get(`https://rickandmortyapi.com/api/character?page=${page}`)
@@ -22,6 +21,17 @@ module.exports = {
     } else {
       res.status(200).send(characters);
     }
+  },
+  getNextPage: (req, res) => {
+    let { page } = req.params;
+
+    axios
+      .get(`https://rickandmortyapi.com/api/character?page=${page}`)
+      .then(list => {
+        characters = list.data.results;
+        res.status(200).send(characters);
+      })
+      .catch(err => res.status(500).send(err));
   },
   favCharacter: (req, res) => {
     const { name, image } = req.body;
@@ -48,3 +58,8 @@ module.exports = {
     res.status(200).json(characters);
   }
 };
+
+// let { page } = req.query;
+//     console.log(page);
+
+// `https://rickandmortyapi.com/api/character?page=${page}`
