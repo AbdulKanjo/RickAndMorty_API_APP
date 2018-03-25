@@ -97,9 +97,11 @@ class App extends Component {
           showCharacters={this.showCharacters}
           showFavCharacters={this.showFavCharacters}
         />
-        <main className="main">
-          {!pageSwitch ? characterList : favoriteList}
-        </main>
+        <div className="bgImg">
+          <main className="main">
+            {!pageSwitch ? characterList : favoriteList}
+          </main>
+        </div>
         {!pageSwitch ? <Footer /> : null}
       </div>
     );

@@ -1,7 +1,8 @@
 .cards {
-  height: 27vh;
+  height: 28vh;
   width: 17%;
-  /* border: 2px solid black; */
+  border-radius: 5px;
+  border: 2px solid #e0e2db;
 }
 
 .cardName {
@@ -12,20 +13,19 @@
   justify-content: center;
   align-items: center;
   font-size: 1vw;
-  border: 2px solid green;
+  background-color: #d7fff1;
+  color: #2d728f;
+  font-family: Comic Sans MS;
 }
 
 .imageContainer {
   height: 19vh;
   width: 100%;
-  border-radius: 5px;
-  /* border: 2px dotted purple; */
 }
 
 .cardBtnContainer {
-  height: 4vh;
+  height: 5vh;
   width: 100%;
-  /* border: 2px solid red; */
   display: flex;
 }
 
@@ -33,15 +33,21 @@
   height: 4vh;
   width: 33.33%;
   font-size: 1vw;
-  /* border: 2px dotted green; */
+  background-color: #e0e2db;
 }
 
 .editCardBtn {
   height: 4vh;
   width: 50%;
   font-size: 1vw;
+  background-color: #e0e2db;
 }
 
 .editNameInput {
-  background-color: aquamarine;
+  background-color: #f6feaa;
+}
+
+.cardBtn:hover,
+.editCardBtn:hover {
+  background-color: #09e85e;
 }

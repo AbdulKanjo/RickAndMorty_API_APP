@@ -1,13 +1,16 @@
 .header {
   height: 15vh;
   width: 100%;
-  border: 2px dotted black;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1vw;
   font-family: "Get Schwifty Regular";
   font-size: 2vw;
+  text-shadow: 2px 2px #521945;
+  background-color: #17bebb;
+  color: #09e85e;
+  border-bottom: 2.5px solid #399e5a;
 }
 
 .header-icon {
@@ -19,7 +22,6 @@
 .btnContainer {
   height: 15vh;
   width: 10%;
-  /* border: 2px dotted blue; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,5 +32,12 @@
   width: 4vw;
   border-radius: 50%;
   font-size: 1vw;
-  /* border: 2px solid green; */
+  font-family: Comic Sans MS;
+  background-color: #09e85e;
+  border: 1.25px solid #e0e2db;
+}
+
+.Btn:hover {
+  background-color: #e0e2db;
+  border: 1.25px solid #09e85e;
 }

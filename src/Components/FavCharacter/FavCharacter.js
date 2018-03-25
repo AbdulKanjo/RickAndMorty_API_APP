@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./FavCharacter.css";
 
 class favCharacter extends Component {
   constructor(props) {
@@ -13,7 +12,7 @@ class favCharacter extends Component {
   render() {
     const { name, image } = this.state;
     return (
-      <div className="cards">
+      <div className="favCards">
         <h3 className="cardName">{name}</h3>
         <img className="imageContainer" src={image} alt="Character Pic" />
       </div>

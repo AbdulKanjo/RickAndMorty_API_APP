@@ -1,25 +1,17 @@
 .footer {
   height: 10vh;
   width: 100%;
-  border: 2px dotted purple;
   display: flex;
   align-items: flex-end;
+  background-color: #17bebb;
+  border-top: 2.5px solid #399e5a;
 }
 
 .footerBtnContainer {
   height: 10vh;
   width: 10%;
-  border: 2px solid green;
   margin-left: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.Btn {
-  height: 8vh;
-  width: 4vw;
-  border-radius: 50%;
-  font-size: 1vw;
-  border: 2px solid green;
 }

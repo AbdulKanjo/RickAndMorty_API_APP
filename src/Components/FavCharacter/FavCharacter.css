@@ -1,23 +1,12 @@
 .cards {
-  height: 27vh;
+  height: 23vh;
   width: 17%;
-  /* border: 2px solid black; */
+  border: 2px solid white;
 }
 
-.cardName {
-  height: 4vh;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1vw;
-  border: 2px solid green;
-}
-
-.imageContainer {
+/* .imageContainer {
   height: 19vh;
   width: 100%;
-  border-radius: 5px;
-  /* border: 2px dotted purple; */
-}
+  border-radius: 5px; */
+/* border: 2px dotted purple; */
+/* } */

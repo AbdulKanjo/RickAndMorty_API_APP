@@ -5,6 +5,16 @@
   font-size: 100%;
 }
 
+.bgImg {
+  background: url(https://images.alphacoders.com/876/876589.jpg) no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 160vh;
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -15,3 +25,14 @@
   width: 95%;
   margin: auto;
 }
+
+/* color palatte 
+background-color: #D7FFF1;
+background-color: #F6FEAA;
+background-color: #399E5A;
+background-color: #17BEBB;
+background-color: #2D728F; */
+
+/* background-image: url(https://images.alphacoders.com/876/876589.jpg);
+  background-size: cover;
+  height: 225vh; */
