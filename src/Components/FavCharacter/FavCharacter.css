@@ -1,12 +1,11 @@
-.cards {
-  height: 23vh;
-  width: 17%;
-  border: 2px solid white;
+.removeBtn {
+  height: 4.5vh;
+  width: 100%;
+  /* font-size: 1vw; */
+  border-radius: 5px;
+  background-color: #d7fff1;
 }
 
-/* .imageContainer {
-  height: 19vh;
-  width: 100%;
-  border-radius: 5px; */
-/* border: 2px dotted purple; */
-/* } */
+.removeBtn:hover {
+  background-color: #ff0202;
+}

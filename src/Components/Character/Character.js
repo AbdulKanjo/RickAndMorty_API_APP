@@ -50,14 +50,17 @@ class Character extends Component {
             </div>
             <img className="imageContainer" src={image} alt="Character Pic" />
             <div className="cardBtnContainer">
-              <button className="cardBtn" onClick={this.handleSwitch}>
+              <button className="cardBtn edit" onClick={this.handleSwitch}>
                 Edit
               </button>
-              <button className="cardBtn" onClick={() => deleteCharacter(id)}>
+              <button
+                className="cardBtn delete"
+                onClick={() => deleteCharacter(id)}
+              >
                 Delete
               </button>
               <button
-                className="cardBtn"
+                className="cardBtn fav"
                 onClick={() => favCharacter(name, id, image)}
               >
                 Fav
@@ -75,10 +78,13 @@ class Character extends Component {
             </div>
             <img className="imageContainer" src={image} alt="Character Pic" />
             <div className="cardBtnContainer">
-              <button className="editCardBtn" onClick={this.handleSwitch}>
+              <button
+                className="editCardBtn delete"
+                onClick={this.handleSwitch}
+              >
                 Cancel
               </button>
-              <button className="editCardBtn" onClick={this.handleConfirm}>
+              <button className="editCardBtn edit" onClick={this.handleConfirm}>
                 Submit
               </button>
             </div>

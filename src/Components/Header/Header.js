@@ -6,7 +6,7 @@ const Header = ({ showCharacters, showFavCharacters }) => {
     <header className="header">
       <img
         className="header-icon"
-        src="Rick_And_Morty_logo,png"
+        src="https://vignette.wikia.nocookie.net/rickandmorty/images/c/c8/Rick_and_Morty_logo.png/revision/latest?cb=20160907114210"
         alt="Fix Logo"
       />
       <h1>Select Your favortite Charickter</h1>
