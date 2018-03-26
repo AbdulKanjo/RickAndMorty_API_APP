@@ -72,7 +72,6 @@ class App extends Component {
 
   removeFavCharacter(name, id, image) {
     axios.post(`/api/favCharacters/${id}`, { name, image }).then(res => {
-      console.log(res.data);
       this.setState({
         characters: res.data[0],
         favorites: res.data[1]

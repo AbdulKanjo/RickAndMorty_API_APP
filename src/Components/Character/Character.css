@@ -30,7 +30,7 @@
 }
 
 .cardBtn {
-  height: 4.5vh;
+  height: 5vh;
   width: 33.33%;
   /* font-size: 1vw; */
   border-radius: 5px;
@@ -38,7 +38,7 @@
 }
 
 .editCardBtn {
-  height: 4vh;
+  height: 5vh;
   width: 50%;
   font-size: 1vw;
   background-color: #d7fff1;

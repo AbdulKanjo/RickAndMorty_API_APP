@@ -4,13 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1vw;
   font-family: "Get Schwifty Regular";
-  font-size: 2vw;
   text-shadow: 2px 2px #521945;
   background-color: #17bebb;
   color: #09e85e;
   border-bottom: 2.5px solid #399e5a;
+}
+
+h1 {
+  font-size: 45px;
 }
 
 .header-icon {
@@ -30,7 +32,6 @@
   height: 5vw;
   width: 5vw;
   border-radius: 50%;
-  /* font-size: 1vw; */
   font-family: Comic Sans MS;
   background-color: #09e85e;
   border: 1.25px solid #e0e2db;
@@ -41,7 +42,7 @@
   border: 1.25px solid #09e85e;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   h1 {
     font-size: 25px;
     margin-left: 15%;
